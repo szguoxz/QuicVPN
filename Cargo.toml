@@ -1,0 +1,19 @@
+[workspace]
+resolver = "2"
+members = [
+    "vpn",
+    "quic_client",
+    "quic_server",
+    "quic_proxy",
+    #"simplewintun"
+]
+
+[profile.release]
+opt-level = 3
+lto = true
+strip = true
+
+[workspace.dependencies]
+quinn = "*"
+tokio = { version = "*", features = ["rt", "rt-multi-thread", "time", "macros", "sync"] }
+tokio-scoped = "*"
