@@ -9,7 +9,7 @@ Another thing I want to get familiar with is Quic. It's been out for a while, I 
 
 Along the way, I realize, why not add a proxy server for fun! So it became a Vpn server and Proxy Server at the same time
 
-#Installation
+# Installation
 I am trying to make the use of this product as painless as possible, because that's the bad experience I had with OpenVpn. But while working on it. I realize all the decisions OpenVpn made makes sense. :-) Network is complicated!
 
 So, we will go though only one scenario. If your scenario is different, then you will have to get familiar with all the networking yourself.
