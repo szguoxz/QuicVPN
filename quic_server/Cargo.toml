@@ -1,0 +1,36 @@
+[package]
+name = "quic_server"
+version = "0.1.0"
+edition = "2021"
+authors = ["Calvin Guo"]
+description = "a vpn/proxy server based on quic. After you create the server.toml config file, you can run it without any args"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+quinn = "*"
+tokio = { version = "*", features = ["rt", "rt-multi-thread", "time", "macros", "sync"] }
+tokio-scoped = "*"
+tokio-util = "*"
+anyhow = "*"
+crc = "3"
+bencher = "0.1.5"
+directories-next = "2"
+rand = "0.8"
+rcgen = {version = "*", features = ["pem", "x509-parser"]}
+rustls = "0.20.8" 
+rustls-pemfile = "1.0.0"
+clap = { version = "4", features = ["derive", "cargo"] }
+url = "2"
+etherparse = "*"
+vpn = { path = "../vpn"}
+futures = "*"
+log = "*"
+env_logger = "*"
+webpki = "*"
+toml = "*"
+x509-parser = "*"
+bytes = "*"
+serde = { version = "*", features = ["derive"]}
+httparse = "*"
+scopeguard = "*"

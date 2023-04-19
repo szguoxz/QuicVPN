@@ -1,0 +1,34 @@
+[package]
+name = "vpn"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+quinn = "0.9.3"
+anyhow = "*"
+etherparse = "*"
+log = "*"
+env_logger = "*"
+tokio = "*"
+tokio-util = "*"
+rtls = { version = "0.20", package = "rustls" }
+rustls-pemfile = "*"
+toml = "*"
+tokio-scoped = "*"
+x509-parser = "*"
+futures = "0.3.21"
+serde = { version = "*", features = ["derive"]}
+pin-project = "*"
+chrono = "*"
+bytes = "1.2"
+
+[target.'cfg(target_os = "windows")'.dependencies]
+wintun = { path = "../simplewintun", package = "simple_wintun" }
+
+[target.'cfg(target_os = "linux")'.dependencies]
+tokio-tun= "*"
+
+[target.'cfg(target_os = "macos")'.dependencies]
+tun-tap = "*"

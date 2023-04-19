@@ -1,0 +1,31 @@
+[package]
+name = "quic_client"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+etherparse = "*"
+quinn = "*"
+derive_builder = "0.11.2"
+anyhow = "*"
+crc = "3"
+bencher = "0.1.5"
+directories-next = "2"
+rand = "0.8"
+rcgen = "*"
+rustls = { version = "*", default-features = false, features = ["quic", "dangerous_configuration"] }
+rustls-pemfile = "*"
+clap = { version = "4", features = ["derive"] }
+tokio = { version = "*", features = ["rt", "rt-multi-thread", "time", "macros", "sync"] }
+tokio-scoped = "*"
+tokio-util = "*"
+url = "2"
+vpn = { path = "../vpn"}
+futures = "*"
+log = "*"
+env_logger = "*"
+toml = "*"
+serde = { version = "*", features = ["derive"]}
+x509-parser = "*"
